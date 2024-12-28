@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #1db954;
+  --secondary-color: #191414;
+  --text-color: #ffffff;
+  --background-color: #121212;
+  --hover-color: #1ed760;
+}
+
+.navbar-custom {
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--hover-color);
+}
+
+.navbar-toggler {
+  border-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+  background-image: url(../assets/icon.svg);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  color: var(--text-color);
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-success {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .form-control {
+    margin-bottom: 1rem;
+  }
+
+  .btn-outline-success {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    align-items: center;
+  }
+
+  .form-control {
+    width: 300px;
+  }
+}
+
+/* Animation for navbar items */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-nav .nav-item {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+/* Hover effect for navbar brand icon */
+.navbar-brand i {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
